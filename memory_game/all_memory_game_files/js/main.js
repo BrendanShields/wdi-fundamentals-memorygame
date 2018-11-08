@@ -17,6 +17,24 @@ let cards 		=
 	 cardImage: "all_memory_game_files/images/king-of-diamonds.png"}]
 
 
+function shuffle(arra1) {
+    var ctr = arra1.length, temp, index;
+
+// While there are elements in the array
+    while (ctr > 0) {
+// Pick a random index
+        index = Math.floor(Math.random() * ctr);
+// Decrease ctr by 1
+        ctr--;
+// And swap the last element with it
+        temp = arra1[ctr];
+        arra1[ctr] = arra1[index];
+        arra1[index] = temp;
+    }
+    return arra1;
+}
+cards = shuffle(cards);
+
 
 let cardsInPlay = [];
 
@@ -24,10 +42,11 @@ let cardsInPlay = [];
 function checkForMatch () {
 	var divResult = document.getElementById('result');
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-	console.log("You found a match!");
-	alert('You Win!')
-	}else{console.log("Sorry, try again."); 
-	alert('You lose!')
+	var content = document.createTextNode("You Win!!");
+	divResult.appendChild(content);
+	}else{
+	var content = document.createTextNode("You lose!!");
+	divResult.appendChild(content);
 	}
 }
 

@@ -1,7 +1,16 @@
+.result {
+	height:30px;
+	width: 100%;
+	background: #00A6B3;
+	color: #fff;
+	font-size:25px;
+}
+
 nav {
 	background: #00A6B3;
 	color: white;
 	padding: 20px;
+	display: block;
 }
 
 header {
@@ -77,11 +86,7 @@ footer{
 	font-weight: 500;
 }
 
-.result {
-	height:30px;
-	background:blue;
-	color: white;
-}
+
 
 .copyright {
 	float: left;
